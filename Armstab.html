@@ -1,0 +1,269 @@
+    <!doctype html>
+    <html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css" />
+        <title>ShapeLift - Arms Tab</title>
+        <link rel="icon" href="ShapeLiftLogo.png" type="image/png">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    </head>
+    <body style="background-color:whitesmoke;">
+        <nav class="navbar fixed-top navbar-expand-lg bg-transparent">
+            <div class="container-fluid">
+                <!-- Logo and Brand Name -->
+                <div class="d-flex align-items-center">
+                    <img src="ShapeLiftLogo.png" class="logo1" alt="ShapeLift Logo" style="width: 50px; height: 40px; margin-right: 5px; position: relative; top: -2px;">
+                    <a class="navbar-brand" href="Hometab.html">ShapeLift</a>
+                </div>
+        
+                <!-- Centered Search Bar -->
+                <div class="d-flex flex-grow-1 justify-content-center ms-0">
+                    <form class="d-flex align-items-center" role="search">
+                        <input id="searchInput" class="form-control custom-search" type="search" placeholder="Search" aria-label="Search" style="max-width: 500px; width: 100%;">
+                        <div id="suggestionsContainer" class="suggestions-container"></div>
+                    </form>
+                </div>
+            </div>
+        </nav>
+
+    <!--Tabs-->
+        <div class="container text-center" id="tabs">
+            <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3 pt-5">
+            <div class="col">
+                <a href="Armstab.html" class="btn w-100 d-flex align-items-center justify-content-center border-black btn-light" 
+                style="padding: 0; border-width: 3px; text-decoration: none;">
+                <img src="armsLogo.png" alt="Arns Image" class="button-image">
+            </a>
+            </div>
+            <div class="col">
+                <a href="Chesttab.html" class="btn w-100 d-flex align-items-center justify-content-center border-black btn-outline-light" 
+                style="padding: 0; border-width: 3px; text-decoration: none;">
+                <img src="chestLogo.png" alt="Chest Image" class="button-image">
+            </a>
+            </div>
+            <div class="col">
+                <a href="Coretab.html" class="btn w-100 d-flex align-items-center justify-content-center border-black btn-outline-light" 
+                style="padding: 0; border-width: 3px; text-decoration: none;">
+                <img src="coreLogo.png" alt="Core Image" class="button-image" style="max-width: 24.7%; height: auto;">
+            </a>
+            </div>
+            <div class="col">
+                <a href="Legstab.html" class="btn w-100 d-flex align-items-center justify-content-center border-black btn-outline-light" 
+                style="padding: 0; border-width: 3px; text-decoration: none;">
+                <img src="legsLogo.png" alt="Legs Image" class="button-image" style="max-width: 12.1%; height: auto;">
+            </a>
+            </div>
+            <div class="col">
+                <a href="Backtab.html" class="btn w-100 d-flex align-items-center justify-content-center border-black btn-outline-light" 
+                style="padding: 0; border-width: 3px; text-decoration: none;">
+                <img src="backLogo.png" alt="Back Image" class="button-image" style="max-width: 20%; height: auto;">
+            </a>
+            </div>
+            </div>
+        </div>
+
+    <!--Product Cards-->
+    <div class="container text-start ps-5">
+        <div class="row align-items-start">
+            <!-- First Row -->
+            <div class="col-12 col-md-6 col-lg-4 mt-2">
+                <div class="card custom-card" style="width: 18rem; border: 2px solid black;">
+                    <img src="photo/Dumbbell.png" class="card-img-top custom-image" alt="Product Image">
+                    <div class="card-body custom-body">
+                        <h5 class="card-title">Hexagonal Dumbbell</h5>
+                        <p class="card-text price-box">699 PHP</p>
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                            <img src="Cart.png" alt="Add to Cart" class="icon cart-icon" title="Add to Cart" id="cart-icon">
+                            <img src="Favorite.png" alt="Add to Favorites" class="icon favorites-icon" title="Add to Favorites" id="favorites-icon">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+
+            <div class="col-12 col-md-6 col-lg-4 mt-2">
+                <div class="card custom-card" style="width: 18rem; border: 2px solid black;">
+                    <img src="photo/Trax.png" class="card-img-top custom-image" alt="Product Image">
+                    <div class="card-body custom-body">
+                        <h5 class="card-title">Trax Strengh Pull-up</h5>
+                        <p class="card-text price-box">8,999 PHP</p>
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                            <img src="Cart.png" alt="Add to Cart" class="icon cart-icon" title="Add to Cart" id="cart-icon">
+                            <img src="Favorite.png" alt="Add to Favorites" class="icon favorites-icon" title="Add to Favorites" id="favorites-icon">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4 mt-2">
+                <div class="card custom-card" style="width: 18rem; border: 2px solid black;">
+                    <img src="photo/Stations.png" class="card-img-top custom-image" alt="Product Image">
+                    <div class="card-body custom-body">
+                        <h5 class="card-title">Cable Stations </h5>
+                        <p class="card-text price-box">6,999 PHP</p>
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                            <img src="Cart.png" alt="Add to Cart" class="icon cart-icon" title="Add to Cart" id="cart-icon">
+                            <img src="Favorite.png" alt="Add to Favorites" class="icon favorites-icon" title="Add to Favorites" id="favorites-icon">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row align-items-start mt-2">
+            <!-- Second Row -->
+            <div class="col-12 col-md-6 col-lg-4 mt-2">
+                <div class="card custom-card" style="width: 18rem; border: 2px solid black;">
+                    <img src="photo/Barbel.png" class="card-img-top custom-image" alt="Product Image">
+                    <div class="card-body custom-body">
+                        <h5 class="card-title">Barbell 45-Pound Set</h5>
+                        <p class="card-text price-box">4,999 PHP</p>
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                            <img src="Cart.png" alt="Add to Cart" class="icon cart-icon" title="Add to Cart" id="cart-icon">
+                            <img src="Favorite.png" alt="Add to Favorites" class="icon favorites-icon" title="Add to Favorites" id="favorites-icon">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4 mt-2">
+                <div class="card custom-card" style="width: 18rem; border: 2px solid black;">
+                    <img src="photo/Kettlebell.png" class="card-img-top custom-image" alt="Product Image">
+                    <div class="card-body custom-body">
+                        <h5 class="card-title">Kettlebell</h5>
+                        <p class="card-text price-box">1,999 PHP</p>
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                            <img src="Cart.png" alt="Add to Cart" class="icon cart-icon" title="Add to Cart" id="cart-icon">
+                            <img src="Favorite.png" alt="Add to Favorites" class="icon favorites-icon" title="Add to Favorites" id="favorites-icon">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4 mt-2">
+                <div class="card custom-card" style="width: 18rem; border: 2px solid black;">
+                    <img src="photo/ChinUp.png" class="card-img-top custom-image" alt="Product Image">
+                    <div class="card-body custom-body">
+                        <h5 class="card-title">Wall Mounted Chin-up Bar</h5>
+                        <p class="card-text price-box">9,999 PHP</p>
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                            <img src="Cart.png" alt="Add to Cart" class="icon cart-icon" title="Add to Cart" id="cart-icon">
+                            <img src="Favorite.png" alt="Add to Favorites" class="icon favorites-icon" title="Add to Favorites" id="favorites-icon">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- Sidebar -->
+<div id="toggleButton" style="position: fixed;">
+    <img src="Menu Logo.png" alt="Toggle Sidebar">
+</div>
+<div id="sidebar">
+    <div id="closeButton">
+        <img src="closeButton.png" alt="Close">
+    </div>
+    <div class="sidebar-item">
+        <div class="Profile-Image" id="profileContainer">
+            <img class="profile-pic" src="USERIMAGE.webp" alt="Example">
+        </div>
+        <div class="Profile-Name" id="profileName">
+            BSIT Student
+        </div>
+        
+    <!-- Popover Content -->
+    <div id="popover" class="popover">
+        <div class="popover-header">
+            <img class="popover-profile-pic" src="USERIMAGE.webp" alt="Profile Picture">
+        </div>
+        <div class="popover-content">
+            <center><p><strong>Please Set Up Profile</strong></p></center>
+            <p><strong>Username:</strong> <span id="popoverUsername">User123</span></p>
+            <p><strong>Sex:</strong> <span id="popoverSex">[Not Set]</span></p>
+            <p><strong>Address:</strong> <span id="popoverAddress">[Not Set]</span></p>
+            <div id="editableFields" style="display: none;">
+                <label for="editSex">Sex:</label>
+                <select id="editSex">
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Others">Others</option>
+                </select>
+                <br>
+                <label for="editAddress">Address:</label>
+                <input type="text" id="editAddress" placeholder="Enter your address">
+                <br>
+                <button id="saveEdits">Save</button>
+            </div>
+            <button id="editButton">Edit</button>
+            
+        </div>
+    </div>
+    </div>
+        <a href="Favorites Tab.html" class="sidebar-item">Favorites</a>
+        <a href="kani.html" class="sidebar-item">About Us</a>
+        <a href="#" class="sidebar-item" id="openRightbar">
+            <img src="Cart Logo.png" alt="Cart"> Cart
+        </a>
+        
+    <!--Press Cart for rightbar -->
+    <div id="rightbar" class="rightbar" style="width: 0; transition: width 0.3s;">
+        <div id="closeRightbar" style="cursor: pointer;">x</div>
+        <div id="cartItems"></div>
+        <div id="cart-summary">
+            <div>Total Products: <span id="totalProducts">0</span></div>
+            <div>Total Price: <span id="totalPrice">0</span></div>
+        </div>
+        <button id="removeAll" class="remove-btn">Remove All</button>
+        <a href="#" onclick="showCheckoutAlert()" class="checkout-btn sidebar-item logout-btn">Check Out</a>
+    </div>
+    
+    
+    <!--Below the Cart button-->
+    
+    <div class="sidebar-item dropdown">
+        <a href="#" class="dropdown-toggle sidebar-item" id="productsDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+            <b>Products</b>
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="productsDropdown">
+            <li>
+                <a href="Armstab.html" class="dropdown-item">
+                    <img src="armsLogo.png" alt="Arms" style="width: 20px; margin-right: 5px;"> Arms
+                </a>
+            </li>
+            <li>
+                <a href="Chesttab.html" class="dropdown-item">
+                    <img src="chestLogo.png" alt="Chest" style="width: 20px; margin-right: 5px;"> Chest
+                </a>
+            </li>
+            <li>
+                <a href="Coretab.html" class="dropdown-item">
+                    <img src="coreLogo.png" alt="Core" style="width: 20px; margin-right: 5px;"> Core
+                </a>
+            </li>
+            <li>
+                <a href="Legstab.html" class="dropdown-item">
+                    <img src="legsLogo.png" alt="Legs" style="width: 20px; margin-right: 5px;"> Legs
+                </a>
+            </li>
+            <li>
+                <a href="Backtab.html" class="dropdown-item">
+                    <img src="backLogo.png" alt="Legs" style="width: 20px; margin-right: 5px;"> Back
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+        
+            
+
+        
+
+
+        <script src="Hometabjs.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    </body>
+    </html>

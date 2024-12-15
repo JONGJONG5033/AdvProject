@@ -1,0 +1,427 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css" />
+    <title>ShapeLift - Favorites Tab</title>
+    <link rel="icon" href="ShapeLiftLogo.png" type="image/png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <style>
+    .card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Align the button to the right */
+}
+
+.remove-favorite {
+    background-color: white; /* White background */
+    color: black; /* Black text */
+    border: 2px solid black; /* Black border */
+    padding: 10px 20px; /* Padding */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Cursor on hover */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for background and text color */
+    margin-left: auto; /* Push the button to the right */
+    width: 100%; /* Make button the same width as the price */
+    text-align: center; /* Center the button text */
+}
+
+.price-box {
+    display: block; /* Ensure it behaves like a block-level element */
+    width: 100%; /* Ensure the price has the same width */
+    text-align: center; /* Center-align the price text */
+}
+
+/* Hover effect */
+.remove-favorite:hover {
+    border-color: black;
+    background-color: red; /* Red background on hover */
+    color: white; /* White text on hover */
+}
+    </style>
+</head>
+<body style="background-color:whitesmoke;">
+    <nav class="navbar fixed-top navbar-expand-lg bg-transparent">
+        <div class="container-fluid">
+            <!-- Logo and Brand Name -->
+            <div class="d-flex align-items-center">
+                <img src="ShapeLiftLogo.png" class="logo1" alt="ShapeLift Logo" style="width: 50px; height: 40px; margin-right: 5px; position: relative; top: -2px;">
+                <a class="navbar-brand" href="index.html">ShapeLift</a>
+            </div>
+    
+            <!-- Centered Search Bar -->
+            <div class="d-flex flex-grow-1 justify-content-center ms-0">
+                <form class="d-flex align-items-center" role="search">
+                    <input id="searchInput" class="form-control custom-search" type="search" placeholder="Search" aria-label="Search" style="max-width: 500px; width: 100%;">
+                    <div id="suggestionsContainer" class="suggestions-container"></div>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+<!--Tabs-->
+<div class="container text-center" id="tabs">
+    <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3 pt-5">
+      <div class="col">
+        <a href="Armstab.html" class="btn w-100 d-flex align-items-center justify-content-center border-black btn-outline-light" 
+        style="padding: 0; border-width: 3px; text-decoration: none;">
+         <img src="armsLogo.png" alt="Arns Image" class="button-image">
+     </a>
+      </div>
+      <div class="col">
+        <a href="Chesttab.html" class="btn w-100 d-flex align-items-center justify-content-center border-black btn-outline-light" 
+        style="padding: 0; border-width: 3px; text-decoration: none;">
+         <img src="chestLogo.png" alt="Chest Image" class="button-image">
+     </a>
+      </div>
+      <div class="col">
+        <a href="Coretab.html" class="btn w-100 d-flex align-items-center justify-content-center border-black btn-outline-light" 
+        style="padding: 0; border-width: 3px; text-decoration: none;">
+        <img src="coreLogo.png" alt="Core Image" class="button-image" style="max-width: 24.7%; height: auto;">
+      </a>
+      </div>
+      <div class="col">
+        <a href="Legstab.html" class="btn w-100 d-flex align-items-center justify-content-center border-black btn-light" 
+        style="padding: 0; border-width: 3px; text-decoration: none;">
+        <img src="legsLogo.png" alt="Legs Image" class="button-image" style="max-width: 12.1%; height: auto;">
+      </a>
+      </div>
+      <div class="col">
+        <a href="Backtab.html" class="btn w-100 d-flex align-items-center justify-content-center border-black btn-outline-light" 
+        style="padding: 0; border-width: 3px; text-decoration: none;">
+        <img src="backLogo.png" alt="Back Image" class="button-image" style="max-width: 20%; height: auto;">
+      </a>
+      </div>
+    </div>
+  </div>
+    </div>
+
+    <!--Sidebar-->
+<div id="toggleButton" style="position: fixed;">
+    <img src="Menu Logo.png" alt="Toggle Sidebar">
+  </div>
+  <div id="sidebar">
+    <div id="closeButton">
+      <img src="closeButton.png" alt="Close">
+    </div>
+    <div class="sidebar-item">
+      <div class="Profile-Image">
+        <img class="profile-pic" src="USERIMAGE.webp" alt="Example">
+      </div>
+      <div class="Profile-Name" id="profileName">
+        BSIT Student
+      </div>
+  </div>
+      <a href="Favorites Tab.html" class="sidebar-item">Favorites</a>
+      <a href="About Us.html" class="sidebar-item">About Us</a>
+      <a href="#" class="sidebar-item" id="openRightbar">
+        <img src="Cart Logo.png" alt="Cart"> Cart
+    </a>
+    
+    <!--Press Cart for rightbar -->
+    <div id="rightbar" class="rightbar" style="width: 0; transition: width 0.3s;">
+        <div id="closeRightbar" style="cursor: pointer;">x</div>
+        <div id="cartItems"></div>
+        <div id="cart-summary">
+            <div>Total Products: <span id="totalProducts">0</span></div>
+            <div>Total Price: <span id="totalPrice">0</span></div>
+        </div>
+        <button id="removeAll" class="remove-btn">Remove All</button>
+        <a href="Check Out Tab.html" class="checkout-btn sidebar-item logout-btn">Check Out</a>
+    </div>
+    
+    
+    <!--Below the Cart button-->
+    
+        <div class="sidebar-item"><b>Products</b></div>
+        <a href="Armstab.html" class="sidebar-item">
+            <img src="armsLogo.png" alt="Arms"> Arms
+        </a>
+        <a href="Chesttab.html" class="sidebar-item">
+            <img src="chestLogo.png" alt="Chest"> Chest
+        </a>
+        <a href="Coretab.html" class="sidebar-item">
+            <img src="coreLogo.png" alt="Core"> Core
+        </a>
+        <a href="Legstab.html" class="sidebar-item">
+            <img src="legsLogo.png" alt="Legs"> Legs
+        </a>
+        <a href="Backtab.html" class="sidebar-item">
+            <img src="backLogo.png" alt="Back"> Back
+        </a>
+    </div>
+    </div>
+    <h1><center>Your Favorite Products</center></h1>
+    <div id="favorites-container"></div>
+        <script>
+            // script.js for sidebar menu
+document.getElementById('toggleButton').addEventListener('click', function () {
+    var sidebar = document.getElementById('sidebar');
+    sidebar.style.right = sidebar.style.right === "-250px" ? "0" : "-250px";
+});
+
+// Close sidebar when clicking the close button
+document.getElementById('closeButton').addEventListener('click', function () {
+    var sidebar = document.getElementById('sidebar');
+    sidebar.style.right = "-250px";
+});
+
+// Close sidebar when clicking outside of it
+document.addEventListener('click', function (event) {
+    var sidebar = document.getElementById('sidebar');
+    var toggleButton = document.getElementById('toggleButton');
+    if (!sidebar.contains(event.target) && !toggleButton.contains(event.target)) {
+        sidebar.style.right = "-250px";
+    }
+});
+
+// Add to Cart and Add to Favorite Icon
+const cartIcons = document.querySelectorAll('.cart-icon');
+const favoritesIcons = document.querySelectorAll('.favorites-icon');
+cartIcons.forEach(cartIcon => {
+    cartIcon.addEventListener('click', function () {
+        cartIcon.src = cartIcon.src.includes('Cart.png') ? 'Cart2.png' : 'Cart.png';
+    });
+});
+
+favoritesIcons.forEach(favoritesIcon => {
+    favoritesIcon.addEventListener('click', function () {
+        favoritesIcon.src = favoritesIcon.src.includes('Favorite.png') ? 'Favorite2.png' : 'Favorite.png';
+    });
+});
+
+// Add to Favorites Functionality
+let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+
+// Function to update localStorage
+function updateFavoritesStorage() {
+    localStorage.setItem('favorites', JSON.stringify(favorites));
+}
+
+// Restore favorites icon state on page load
+favoritesIcons.forEach((favoritesIcon, index) => {
+    const productName = document.querySelectorAll('.card-title')[index].innerText; // Use product name as identifier
+
+    // Check if the product is in the favorites list
+    const isFavorited = favorites.some(item => item.name === productName);
+
+    // Update the icon state
+    favoritesIcon.src = isFavorited ? 'Favorite2.png' : 'Favorite.png';
+
+    // Add click event listener
+    favoritesIcon.addEventListener('click', function () {
+        const productImage = document.querySelectorAll('.card-img-top')[index].src;
+        const productPrice = document.querySelectorAll('.price-box')[index].innerText;
+
+        // Check if the product is already in the favorites list
+        const existingItemIndex = favorites.findIndex(item => item.name === productName);
+
+        if (existingItemIndex !== -1) {
+            // Product exists, remove it from favorites
+            favorites.splice(existingItemIndex, 1);
+            favoritesIcon.src = 'Favorite.png'; // Update icon
+            alert(`${productName} has been removed from your favorites!`);
+        } else {
+            // Product does not exist, add it to favorites
+            favorites.push({ name: productName, image: productImage, price: productPrice });
+            favoritesIcon.src = 'Favorite2.png'; // Update icon
+            alert(`${productName} has been added to your favorites!`);
+        }
+
+        updateFavoritesStorage(); // Save updated list to localStorage
+    });
+});
+
+// Initialize cart, totalItems, and totalCost from localStorage if available
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+let totalItems = parseInt(localStorage.getItem("totalItems")) || 0;
+let totalCost = parseFloat(localStorage.getItem("totalCost")) || 0;
+
+// Update cart display on page load
+updateCartDisplay();
+
+// Function to update the cart display and save to localStorage
+function updateCartDisplay() {
+    cartItems.innerHTML = ''; // Clear the current items
+    cart.forEach(item => {
+        const itemDiv = document.createElement('div');
+        itemDiv.innerHTML = `${item.name} - ${item.price.toLocaleString()} PHP`; // Format price with commas
+        cartItems.appendChild(itemDiv);
+    });
+    totalProducts.innerText = totalItems;
+    totalPrice.innerText = totalCost.toLocaleString(); // Format total cost with commas
+
+    // Save updated cart data to localStorage
+    localStorage.setItem("cart", JSON.stringify(cart));
+    localStorage.setItem("totalItems", totalItems);
+    localStorage.setItem("totalCost", totalCost);
+}
+
+// Function to add item to the cart
+function addToCart(image, name, price) {
+    cart.push({ image, name, price });
+    totalItems += 1;
+    totalCost += price;
+    updateCartDisplay();
+}
+
+// Event listeners for opening and closing the sidebar
+openRightbar.addEventListener("click", function (event) {
+    event.preventDefault();
+    rightbar.style.width = "250px";
+});
+
+closeRightbar.addEventListener("click", function () {
+    rightbar.style.width = "0";
+});
+
+// Remove all items from the cart
+removeAll.addEventListener("click", function () {
+    cart = [];
+    totalItems = 0;
+    totalCost = 0;
+    updateCartDisplay();
+});
+
+// Add/Remove item on cart-icon click
+const cartIcon = document.querySelectorAll('.cart-icon');
+
+cartIcon.forEach((icon, index) => {
+    icon.addEventListener("click", function () {
+        const productName = document.querySelectorAll('.card-title')[index].innerText; // Get product name
+        const productPrice = parseFloat(
+            document.querySelectorAll('.price-box')[index].innerText.replace(/,/g, '').replace(" PHP", "") // Remove commas and " PHP"
+        );
+
+        // Check if the item is already in the cart
+        const existingItemIndex = cart.findIndex(item => item.name === productName);
+
+        if (existingItemIndex !== -1) {
+            // Item exists, remove it from the cart
+            cart.splice(existingItemIndex, 1);
+            totalItems -= 1;
+            totalCost -= productPrice;
+            updateCartDisplay();
+            alert(`${productName} has been removed from the cart!`); // Alert message for removal
+        } else {
+            // Item does not exist, add it to the cart
+            addToCart(icon.src, productName, productPrice);
+            alert(`${productName} has been added to the cart!`); // Alert message for addition
+        }
+    });
+});
+
+// Search bar functionality
+const searchInput = document.getElementById('searchInput');
+const suggestionsContainer = document.getElementById('suggestionsContainer');
+
+const productData = {
+    Backtab: {
+        products: ['Lat Pulldown Machine', 'T Bar Row', 'Hyperextension Bench', 'Cable Row Machine', 'Seated Row Machine', 'Pullover Machine'],
+        page: 'Backtab.html' // payts nani
+    },
+    Armstab: {
+        products: ['Hexagonal Dumbbell', 'Trax Strengh Pull-up', 'Cable Stations', 'Barbell 45-Pound Set', 'Kettlebell', 'Wall Mounted Chin-up Bar'],
+        page: 'Armstab.html'// payts nani
+    },
+    Chesttab: {
+        products: ['Push-up Bracket Board Portable', 'Chest Smith', 'Power Twister Bar Chest Builder', 'Weight Bench Barbell Rack Adjustable', 'Kettlebell', 'Push Up Bars Stand Grip (Paralletes)'],
+        page: 'Chesttab.html' // payts nani
+    },
+    Coretab: {
+        products: ['Exercise Mat', 'Yoga Ball', 'Ab Wheel Roller', 'ABS Workout Equipment', 'Jump Rope Cable', 'Core Hammer'],
+        page: 'Coretab.html' // payts nani
+    },
+    Legstab: {
+        products: ['Leg Press Machine', 'Leg Extension Machine', 'Plyometric Box', 'Squat Machine', 'Jump Rope Cable', 'Calf Raise Machine'],
+        page: 'Legstab.html' // payts nani
+    }
+};
+
+const allProducts = Object.entries(productData).flatMap(([tab, { products, page }]) =>
+    products.map(product => ({ title: product, page }))
+);
+
+searchInput.addEventListener('input', function () {
+    const query = searchInput.value.toLowerCase().trim();
+    suggestionsContainer.innerHTML = ''; 
+
+    if (query) {
+        const filteredProducts = allProducts.filter(({ title }) => title.toLowerCase().includes(query));
+
+        filteredProducts.forEach(({ title, page }) => {
+            const suggestion = document.createElement('div');
+            suggestion.classList.add('suggestion');
+            suggestion.textContent = title;
+            suggestionsContainer.appendChild(suggestion);
+
+            suggestion.addEventListener('click', function () {
+                window.location.href = page; 
+            });
+        });
+    }
+});
+
+// Close the suggestions container when clicking outside of it
+document.addEventListener('click', function (event) {
+    if (!searchInput.contains(event.target) && !suggestionsContainer.contains(event.target)) {
+        suggestionsContainer.innerHTML = ''; 
+    }
+});
+
+    // Check if a user is logged in (username stored in localStorage)
+    const storedData = JSON.parse(localStorage.getItem("userData"));
+
+    if (storedData && storedData.username) {
+        // Update the Profile-Name in the sidebar
+        const profileNameElement = document.getElementById("profileName");
+        profileNameElement.textContent = storedData.username;
+    }
+
+
+            // Retrieve favorites list from localStorage
+            const favorite = JSON.parse(localStorage.getItem('favorites')) || [];
+
+            // Get the container for displaying favorites
+            const favoritesContainer = document.getElementById('favorites-container');
+
+            // Render favorite items
+            if (favorites.length > 0) {
+                favorites.forEach((item, index) => {
+                    const productCard = document.createElement('div');
+                    productCard.classList.add('card');
+                    productCard.style.border = '2px solid black';
+                    productCard.style.width = '18rem';
+
+                    productCard.innerHTML = `
+                        <img src="${item.image}" class="card-img-top custom-image" alt="Product Image">
+                        <div class="card-body custom-body">
+                            <h5 class="card-title">${item.name}</h5>
+                            <p class="card-text price-box">${item.price}</p>
+                            <button class="btn remove-favorite" data-index="${index}">Remove</button>
+                        </div>
+                    `;
+
+                    favoritesContainer.appendChild(productCard);
+                });
+            } else {
+                favoritesContainer.innerHTML = '<p>No favorites added yet.</p>';
+            }
+
+            // Event listener for remove button
+            favoritesContainer.addEventListener('click', function(event) {
+                if (event.target.classList.contains('remove-favorite')) {
+                    const index = event.target.getAttribute('data-index');
+                    // Remove the item from the array
+                    favorites.splice(index, 1);
+                    // Save updated favorites to localStorage
+                    localStorage.setItem('favorites', JSON.stringify(favorites));
+                    // Re-render the favorites
+                    window.location.reload();
+                }
+            });
+        </script>
+        <script src="Hometabjs.js"></script>
+</body>
+</html>

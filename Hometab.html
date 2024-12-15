@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="Hometabstyle.css" />
+  <title>ShapeLift - Home</title>
+  <link rel="icon" href="ShapeLiftLogo.png" type="image/png">
+  <link rel="stylesheet" href="Hometabstyle.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img src="ShapeLiftLogo.png" alt="ShapeLift Logo"> ShapeLift</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <!-- Navbar links -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#programs">Programs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Armstab.html">Categories</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="kani.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+<!-- Welcome Section -->
+<section class="hero" id="home">
+  <div class="container text-center fade-in">
+    <p id="welcomeMessage">
+      Welcome, ShapeLifter! Find Your Strength,
+      Shape Your Body, and Elevate Your Health with
+      Our Fitness Gear Collection. 
+      Get in Shape and Lift Up with ShapeLift
+  </p>
+  
+    <a href="#programs" class="btn btn-light btn-lg mt-3">Shop Now</a>
+    <a href="index.html" class="btn btn-light btn-lg mt-3">Log Out</a>
+  </div>
+</section>
+
+  <!-- ANG ANIMATION DIRI KAY MAOT DAPAT DIDTO MU TRIGGER PAG MA SCROLL PATUDLO KAY HANS UG RYAN -->
+<!-- Program Section -->
+<section class="program-section" id="programs">
+  <h2 class="fade-in-heading">Browse Our Programs</h2>
+  <h1 class="fade-in-heading">BUILD YOUR BEST BODY</h1>
+  <div class="program-cards">
+    <a href="Armstab.html" class="card slide-in">
+      <div class="image-hover" style="background-image: url(https://sfhealthtech.com/cdn/shop/articles/bobybuilder-doing-arms-workout.jpg?v=1717501481);"></div>
+      <h3>Arm</h3>
+      <p>Creating tension that’s temporarily making the muscle fibers smaller or contracted.</p>
+    </a>
+    <a href="Chesttab.html" class="card slide-in">
+      <div class="image-hover" style="background-image: url(https://asitisnutrition.com/cdn/shop/articles/chest_1_800x800.jpg?v=1559816224);"></div>
+      <h3>Chest</h3>
+      <p>Exercise your heart rate up and keep it up for a prolonged period of time.</p>
+    </a>
+    <a href="Coretab.html" class="card slide-in">
+      <div class="image-hover" style="background-image: url(https://kustomkitgymequipment.com/wp-content/uploads/2024/02/knee-raise.webp);"></div>
+      <h3>Core</h3>
+      <p>Diaphragmatic breathing technique commonly used in yoga.</p>
+    </a>
+    <a href="Legstab.html" class="card slide-in">
+      <div class="image-hover" style="background-image: url(https://i0.wp.com/www.muscleandfitness.com/wp-content/uploads/2019/06/2-walking-lunge-1109.jpg?quality=86&strip=all);"></div>
+      <h3>Legs</h3>
+      <p>Attempt a maximum weight single lift of a barbell loaded with weight plates.</p>
+    </a>
+    <a href="Backtab.html" class="card slide-in">
+      <div class="image-hover" style="background-image: url(https://i0.wp.com/www.strengthlog.com/wp-content/uploads/2023/06/bodybuilding-back-workout-scaled.jpg?fit=2560%2C1707&ssl=1);"></div>
+      <h3>Back</h3>
+      <p>Strengthen your back muscles with effective weight lifting techniques.</p>
+    </a>
+  </div>
+</section>
+
+<script>
+  // Check if a user is logged in (username stored in localStorage)
+  const storedData = JSON.parse(localStorage.getItem("userData"));
+
+  if (storedData && storedData.username) {
+      const welcomeMessage = document.getElementById("welcomeMessage");
+      welcomeMessage.innerHTML = `Welcome, ${storedData.username}!<br> 
+      Find Your Strength, <br> 
+      Shape Your Body, and Elevate Your Health with <br> 
+      Our Fitness Gear Collection. <br> 
+      Get in Shape and Lift Up with ShapeLift`;
+  }
+</script>
+
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 ShapeLift. All Rights Reserved.</p>
+  </footer>
+
+  <script src="Hometabjs.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+</body>
+
+</html>

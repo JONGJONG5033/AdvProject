@@ -1,0 +1,519 @@
+body {
+  background-color: #f7f7f7;
+  max-width: 100%;
+  height: auto;
+  background-size: cover;
+  margin: 0;
+}
+
+.custom-search {
+margin: auto; /* Center within the navbar */
+max-width: 500px; /* Set a max width for readability */
+width: 100%; /* Ensure it resizes for smaller screens */
+}
+
+form {
+  width: 50%;
+  margin: 0 auto; 
+}
+
+.logo1 {
+  position: absolute;
+  top: 25px;
+  left: 1px;
+  transition: background-image 0.3s ease;
+  cursor: pointer;
+}
+
+.border-black {
+  border-color: black !important;
+}
+
+.btn {
+  transition: background-color 0.3s ease, cursor 0.3s ease;
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+.button-image {
+  transition: transform 0.3s ease;
+  max-width: 20%;
+  height: auto;
+}
+
+.btn:hover .button-image {
+  transform: scale(1.05);
+}
+
+/* Sidebar */
+#toggleButton {
+  position: absolute;
+  top: 30px;
+  right: 20px;
+  cursor: pointer;
+  z-index: 9999;
+}
+
+#toggleButton img {
+  position: relative;
+  transform: translateY(-40%) translateX(30%);
+  left: -70px;
+  width: 50px;    
+}
+
+#sidebar {
+  position: fixed;
+  top: 0;
+  right: -250px;
+  width: 250px;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.1); /* Transparent black */
+  color: black;
+  padding-top: 50px;
+  backdrop-filter: blur(15px); /* Applies the blur effect */
+  -webkit-backdrop-filter: blur(15px); /* For Safari */
+  border: 2px solid rgba(255, 255, 255, 0.3); /* Light border */
+  border-radius: 10px; /* Rounded corners for softer look */
+  transition: all 0.3s ease;
+  font-size: 20px;  
+  z-index: 9999;
+  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+.sidebar-item img:not(.Profile-Image img) {
+max-width: 100%;
+max-height: 50px;
+display: inline-block;
+vertical-align: middle;
+margin-right: 10px;
+}
+
+.sidebar-item {
+  padding: 10px;
+  cursor: pointer;
+  text-decoration: none;
+  color: black; 
+}
+
+.sidebar-item:hover {
+  background: rgba(255, 255, 255, 0.2); /* Subtle highlight effect */
+  color: rgb(0, 0, 0);
+  border-radius: 5px; /* Add rounding to hover effect */
+  text-decoration: none;
+}
+#closeButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+#sidebar {
+  position: fixed;
+  top: 0;
+  right: -250px;
+  width: 250px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1); /* Transparent white */
+  color: black;
+  padding-top: 50px;
+  backdrop-filter: blur(15px); /* Applies the blur effect */
+  -webkit-backdrop-filter: blur(15px); /* For Safari */
+  border: 2px solid rgba(255, 255, 255, 0.3); /* Light border */
+  border-radius: 10px; /* Rounded corners for softer look */
+  transition: all 0.3s ease;
+  font-size: 20px;  
+  z-index: 9999;
+  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.sidebar-item {
+  padding: 10px;
+  cursor: pointer;
+  text-decoration: none;
+  color: black; 
+}
+
+.sidebar-item:hover {
+  background: rgba(27, 26, 26, 0.137); /* Subtle highlight effect */
+  color: rgb(0, 0, 0);
+  border-radius: 5px; /* Add rounding to hover effect */
+  text-decoration: none;
+}
+
+#closeButton img {
+  width: 40px;
+  height: auto;
+  opacity: 0.8; /* Slight transparency */
+}
+
+#closeButton img:hover {
+  opacity: 1; /* Full opacity on hover */
+}
+
+
+.sidebar-item {
+  display: flex;
+  align-items: center;
+}
+
+.Profile-Image {
+  margin-right: 10px;
+}
+
+.Profile-Image img {
+  width: 80px;
+  height: 80px;
+  border: 3px solid black;
+  border-radius: 50%;
+}
+
+/* Sidebar for Cart */
+.rightbar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.726); /* Transparent white */
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  z-index: 1000;
+  color: white;
+  backdrop-filter: blur(15px); /* Applies the blur effect */
+  -webkit-backdrop-filter: blur(15px); /* For Safari */
+  border-left: 2px solid rgba(255, 255, 255, 0.3); /* Light border */
+  box-shadow: -4px 0px 30px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.rightbar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: black;
+  display: block;
+  transition: 0.3s;
+}
+
+.rightbar a:hover {
+  background: rgba(255, 255, 255, 0.048); /* Subtle highlight effect */
+  color: white;
+  border-radius: 5px; /* Rounded corners for hover effect */
+}
+
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+#openRightbar {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+#openRightbar img {
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+#closeRightbar {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 1001;
+  color: white;
+  border: none;
+  outline: none;
+}
+
+#closeRightbar:hover {
+color: red;
+}
+.checkout-btn {
+padding: 5px 5px;
+background-color: #ffffff;
+color: rgb(0, 0, 0);
+text-align: center;
+border-radius: 5px;
+text-decoration: none;
+transition: background-color 0.3s ease;
+transform: translateY(30%) translateX(0);
+border: 1px solid #000000;
+}
+
+.checkout-btn:hover {
+background-color: #000000;
+border: 1px solid #ffffff;
+}
+.remove-btn {
+padding: 5px 5px;
+background-color: #ff0000;
+color: white;
+text-align: center;
+border-radius: 5px;
+text-decoration: none;
+transition: background-color 0.3s ease;
+transform: translateY(30%) translateX(0);
+}
+
+.remove-btn:hover {
+background-color: #000000;
+}
+
+.dropdown-menu {
+  display: none; /* Hide by default */
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* When the dropdown is shown (Bootstrap class show is added) */
+.dropdown-menu.show {
+  display: block !important; /* Show the dropdown */
+  opacity: 1; /* Fade in */
+  transform: translateY(0); /* Slide to original position */
+}
+
+/* Combined and optimized suggestions container */
+.suggestions-container {
+  position: absolute;
+  top: 50px; /* Adjust the value to place it directly below the search bar */
+  left: 60%; /* Align to the center horizontally */
+  transform: translateX(-56.5%); /* Adjust for proper centering */
+  width: 45%; /* Match the search bar's width */
+  background-color: whitesmoke; /* Semi-transparent */
+  border: 1px solid whitesmoke; /* Semi-transparent border */
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 100;
+}
+
+/* Suggestions Items */
+.suggestions-container div,
+.suggestion {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.suggestions-container div:hover,
+.suggestion:hover {
+  background-color: #ddd;
+}
+
+/* Product Cards */
+.container {
+  transform: translateY(2%) translateX(0);
+  display: grid;
+}
+.custom-card {
+  border-radius: 8px;
+  width: 20rem;
+}
+
+.custom-image {
+  width: 100%;
+  height: auto;
+  margin-bottom: 4px;
+}
+
+.custom-body {
+  padding: 1rem;
+  border: 1px solid black !important;
+}
+
+.price-box {
+  border: 2px solid black;
+  padding: 5px;
+  background-color: #f0f0f0;
+  border-radius: 4px;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+.icon {
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  margin-left: 0.5rem;
+  transition: transform 0.2s; 
+}
+
+.icon:hover {
+  transform: scale(1.1);
+}
+
+.cart-icon:hover {
+  content: url('Cart2.png');
+}
+
+.favorites-icon:hover {
+  content: url('Favorite2.png');
+}
+
+.custom-search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  margin-left: auto; /* Pushes the search bar to the right in larger screens */
+}
+
+.navbar {
+  flex-wrap: nowrap;
+  z-index: 1000; /* Prevents wrapping by default */
+}
+
+#tabs {
+  margin-top: 1%;
+}
+
+  @media (max-width: 768px) {
+    .navbar {
+        flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    }
+
+    .d-flex.align-items-center { 
+        justify-content: center; /* Center the logo and brand */
+        width: 80%; /* Take up full width */
+        margin-bottom: 20px; /* Add space below */
+    }
+
+    .custom-search-container {
+        width: 80%; /* Full width for the search bar */
+        justify-content: center; /* Center the search bar */
+        margin-top: 20px; /* Add space above the search bar */
+    }
+
+    .custom-search {
+        width: 80%; /* Search bar takes 80% of the screen width */
+    }
+    .suggestions-container {
+      position: absolute;
+      top: 98px; /* Adjust the value to place it directly below the search bar */
+      left: 50%; /* Align to the center horizontally */
+      transform: translateX(-50%); /* Adjust for proper centering */
+      width: 75%; /* Match the search bar's width */
+      background-color: whitesmoke; /* Semi-transparent */
+      border: 1px solid whitesmoke; /* Semi-transparent border */
+      max-height: 200px;
+      overflow-y: auto;
+      z-index: 100;
+    }
+    .custom-card {
+      margin-left: 12%;
+    }
+    
+    #tabs {
+      margin-top: 15%;
+    }
+}
+
+/* Popover Container */
+.popover {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed at the center of the screen */
+  top: 10%;
+  left: -120%;
+  width: 400px; /* Larger size */
+  background: rgba(255, 255, 255, 0.95); /* Slightly opaque background */
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  padding: 50px;
+  z-index: 1000;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+/* Popover Header */
+.popover-header {
+  text-align: center;
+  margin-bottom: 20px;
+  width: 200px;
+  height: 100px;
+}
+
+.popover-profile-pic {
+  width: 50px;
+  height: 100px;
+  border-radius: 50%;
+  border: 3px solid #333;
+  object-fit: cover;
+}
+
+/* Popover Content */
+.popover-content {
+  text-align: left;
+  font-size: 16px;
+  color: #333;
+  line-height: 1.6;
+}
+
+.popover-content p {
+  margin: 8px 0;
+}
+
+/* Hover and Active States */
+#profileContainer:hover {
+  cursor: pointer;
+}
+
+/* Close Button */
+.popover-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 20px;
+  background: none;
+  border: none;
+  color: #333;
+  cursor: pointer;
+}
+
+#editableFields {
+  margin-top: 10px;
+}
+
+#editableFields label {
+  display: block;
+  margin: 5px 0;
+}
+
+#saveEdits {
+  margin-top: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#saveEdits:hover {
+  background-color: #0056b3;
+}
+
+#editButton {
+  margin-top: 10px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#editButton:hover {
+  background-color: #218838;
+}    
+    

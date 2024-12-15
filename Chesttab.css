@@ -1,0 +1,159 @@
+body {
+    background-color: whitesmoke;
+    background-size: cover;
+    margin: 0;
+    background-color: whitesmoke; /* Background color for body */
+}
+
+.custom-search {
+    width: 300px; /* Adjust this width as needed */
+    margin: 0 auto; /* Center the input */
+}
+
+form {
+    width: 50%; /* Adjust this value to control the overall width of the form */
+    margin: 0 auto; /* Center the form */
+}
+
+.logo1 {
+    position: absolute;
+    top: 25px;
+    left: 1px;
+    width: 100px;
+    transition: background-image 0.3s ease;
+    cursor: pointer;
+}
+
+.border-black {
+    border-color: black !important;
+}
+
+.btn {
+    transition: background-color 0.3s ease, cursor 0.3s ease;
+}
+
+.btn:hover {
+    cursor: pointer;
+}
+
+.button-image {
+    transition: transform 0.3s ease;
+    max-width: 20%;
+    height: auto;
+}
+
+.btn:hover .button-image {
+    transform: scale(1.05);
+}
+
+/* Sidebar */
+#toggleButton {
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    cursor: pointer;
+}
+
+#toggleButton img {
+    position: relative;
+    transform: translateY(-40%) translateX(30%);
+    left: -70px;
+}
+
+#sidebar {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    color: white;
+    padding-top: 50px;
+    transition: right 0.3s ease-in-out;
+    z-index: 10000;
+    border: 3px solid black;
+}
+
+.sidebar-item img:not(.Profile-Image img) {
+    max-width: 100%;
+    max-height: 50px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+#sidebar a {
+    padding: 15px 25px;
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+
+#sidebar a:hover {
+    background-color: #575757;
+}
+
+#closeButton {
+    position: absolute;
+    top: 20px;
+    left: 200px;
+    font-size: 30px;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 10000;
+}
+
+.sidebar-item {
+    display: flex;
+    align-items: center;
+}
+
+.Profile-Image {
+    margin-right: 10px;
+}
+
+.Profile-Image img {
+    width: 80px;
+    height: 80px;
+}
+
+.suggestions-container {
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ccc;
+    max-height: 200px;
+    overflow-y: auto;
+    width: 300px;
+    z-index: 10;
+}
+
+.suggestions-container div {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.suggestions-container div:hover {
+    background-color: #ddd;
+}
+
+.suggestions-container {
+    position: absolute;
+    top: 50px; /* Adjust according to your layout */
+    width: 43.1%;
+    background-color: white;
+    border: 1px solid #ccc;
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 1000;
+}
+
+.suggestion {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.suggestion:hover {
+    background-color: #f0f0f0;
+}
